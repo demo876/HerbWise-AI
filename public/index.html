@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HerbWise AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="top">
+      <strong class="brand">HerbWise AI</strong>
+      <nav>
+        <a href="#explore" data-i18n="navExplore">Explore</a>
+        <label class="lang">
+          <span data-i18n="language">Language</span>
+          <select id="lang" aria-label="Language">
+            <option value="en">English</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </label>
+      </nav>
+    </div>
+    <h1 data-i18n="hero">Explore Indian Medicinal Plants</h1>
+  </header>
+
+  <main>
+    <section id="popularSec">
+      <h2 data-i18n="popularTitle"></h2>
+      <div id="popular" class="grid"></div>
+    </section>
+
+    <section id="explore">
+      <div class="bar">
+        <input id="q" type="search" data-i18n-ph="searchPh" aria-label="Search">
+        <button id="favBtn" aria-pressed="false" data-i18n="savedPlants"></button>
+      </div>
+
+      <div id="chips" class="chips"></div>
+      <div id="alpha" class="chips"></div>
+
+      <p id="count"></p>
+      <p id="notice" aria-live="polite"></p>
+      <div id="grid" class="grid"></div>
+      <div id="pager"></div>
+    </section>
+  </main>
+
+  <footer data-i18n="disclaimer"></footer>
+
+  <dialog id="dlg">
+    <button id="close" data-i18n="close"></button>
+    <div id="detail"></div>
+
+    <section class="chat">
+      <h3 data-i18n="chatTitle"></h3>
+      <div id="log"></div>
+      <form id="cf">
+        <input id="msg" required>
+        <button data-i18n="ask"></button>
+      </form>
+    </section>
+  </dialog>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
